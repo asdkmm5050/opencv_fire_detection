@@ -21,15 +21,21 @@ public:
     ~MainWindow() override;
 
 private slots :
+
     void openFile();
+
     void timerTick();
+
     void play();
+
     void stop();
+
     void reset();
+
 private:
     Ui::MainWindow *ui;
     cv::VideoCapture video_capture;
-    QTimer* timer = nullptr;
+    QTimer *timer = nullptr;
     QString file_name;
     cv::Mat frame_color;
     cv::Mat first_frame_color;

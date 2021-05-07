@@ -76,7 +76,7 @@ cv::Mat ImageProcess::fire_detection(cv::Mat frame_color, cv::Mat frame_hsi) {
     int R, G, B, H, S, I;
     int r = 125;
     int s = 55;
-    int i = 215;
+    int i = 80;
     for (int y = 0; y < frame_color.cols; y++) {
         for (int x = 0; x < frame_color.rows; x++) {
             B = frame_color_data[0];
@@ -85,7 +85,7 @@ cv::Mat ImageProcess::fire_detection(cv::Mat frame_color, cv::Mat frame_hsi) {
             H = frame_hsi_data[0];
             S = frame_hsi_data[1];
             I = frame_hsi_data[2];
-            if (rule1(R, r) && rule2(R, G, B) && rule3(R, S, r, s))
+            if (rule1(R, r) && rule2(R, G, B) && rule3(R, S, r, s) && rule4(I, i))
                 output_data[0] = 255;
             else
                 output_data[0] = 0;
