@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="widget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>511</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Play</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>520</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>520</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1030</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_file"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>help</string>
+    </property>
+    <addaction name="actionf"/>
+    <addaction name="actionu"/>
+    <addaction name="actionc"/>
+    <addaction name="actionk"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuhelp"/>
+  </widget>
+  <action name="actionOpen_file">
+   <property name="text">
+    <string>Open file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionplay">
+   <property name="text">
+    <string>play</string>
+   </property>
+  </action>
+  <action name="actionstop">
+   <property name="text">
+    <string>stop</string>
+   </property>
+  </action>
+  <action name="actionreset">
+   <property name="text">
+    <string>reset</string>
+   </property>
+  </action>
+  <action name="actionf">
+   <property name="text">
+    <string>f</string>
+   </property>
+  </action>
+  <action name="actionu">
+   <property name="text">
+    <string>u</string>
+   </property>
+  </action>
+  <action name="actionc">
+   <property name="text">
+    <string>c</string>
+   </property>
+  </action>
+  <action name="actionk">
+   <property name="text">
+    <string>k</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
