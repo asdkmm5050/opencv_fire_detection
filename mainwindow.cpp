@@ -24,7 +24,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::openFile() {
-    file_name = QFileDialog::getOpenFileName(this, "your video", "", "Video (*.avi)");
+    file_name = QFileDialog::getOpenFileName(this, "your video", "", "Video (*.*)");
     if (file_name == "")return;
     video_capture = cv::VideoCapture(file_name.toStdString());
     fps = video_capture.get(cv::CAP_PROP_FPS);
@@ -52,7 +52,7 @@ void MainWindow::timerTick() {
     cv::subtract(frame_subtracted_f, frame_subtracted_l, frame_subtracted);
     frame_hsi = ImageProcess::frame_rgb_to_hsi(frame_subtracted);
     frame_threshold = ImageProcess::fire_detection(frame_subtracted, frame_hsi);
-    cv::Mat element = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(9, 9), cv::Point(6, 6));
+    cv::Mat element = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(21, 21), cv::Point(11, 11));
     cv::dilate(frame_threshold, frame_threshold, element);
     cv::bitwise_and(frame_color, frame_color, res, frame_threshold);
     QImage image = QImage(res.data, res.cols, res.rows, QImage::Format_BGR888);
